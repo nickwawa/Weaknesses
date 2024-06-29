@@ -1,0 +1,23 @@
+{% extends 'polls/contact.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1 class="neon">
+            Weaknesses
+        </h1>
+        <p>Личная страница рокера. В процессе разработки.</p>
+        {% csrf_token %}
+        <a href="{% url 'beginer' %}"><button class="btn btn-warning">Об исполнителе</button></a>
+        {% for el in values %}
+            {% if el == 'Love' %}
+             <p>{{ el|upper }}</p>
+            {% endif %}
+        {% endfor %}
+        {{ obj.owner }}
+             <p>{{ el|upper }}</p>
+        {{ obj.Chevy }}
+    </div>
+{% endblock %}

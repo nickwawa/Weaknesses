@@ -1,0 +1,15 @@
+{% extends 'polls/contact.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+      <div class="features">
+        <h1>О группе</h1>
+        <p>Что-то интересное</p>
+           {% csrf_token %}
+          <a href="{% url 'friends' %}"> <button class="btn btn-warning">Press</button></a>
+    </div>
+
+
+
+{% endblock %}
